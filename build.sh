@@ -25,7 +25,7 @@ makeVersionMl()
 ocb() 
 { 
 
-if (echo -e "`ocamlbuild -version | sed -e 's/^.*[[:space:]]//g'`\n4.02" | sort -ct. -k1,1n -k2,2n 2>/dev/null >/dev/null)
+if (echo -e "`ocaml -version | sed -e 's/^.*[[:space:]]//g'`\n4.02" | sort -ct. -k1,1n -k2,2n 2>/dev/null >/dev/null)
 then
     FLAGS="$FLAGS"
     PPFLAGF=-ppflag

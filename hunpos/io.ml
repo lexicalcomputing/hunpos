@@ -176,7 +176,7 @@ let lowercase s =
 		let r = Bytes.create l in
 	    for i = 0 to l - 1 do
 		 	let c = unsafe_get s i in
-			let c' = Char.lowercase c in
+			let c' = Char.lowercase_ascii c in
 			unsafe_set r i c';
 			if not !changed && c != c' then
 			 changed := true
